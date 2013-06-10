@@ -71,7 +71,6 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
     private TextView console, ip;
     private VideoQuality defaultVideoQuality = new VideoQuality();
     public static Button button;
-    private String[] resolutionArray;
     private Camera cam;
     private int port;
   	private WifiManager wifiManager;

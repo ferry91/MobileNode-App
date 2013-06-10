@@ -34,6 +34,7 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 public class OptionsActivity extends PreferenceActivity {
 	
@@ -121,6 +122,8 @@ public class OptionsActivity extends PreferenceActivity {
             public boolean onPreferenceClick(Preference arg0) { 
             	Intent myIntent = new Intent(OptionsActivity.this, MainActivity.class);
             	OptionsActivity.this.startActivity(myIntent);
+            	String res = settings.getInt("video_resX", 640)+"x"+settings.getInt("video_resY", 320)+"px";
+            	Log.i("OPTIONS", res);
             	finish();
             	return true;
             }
