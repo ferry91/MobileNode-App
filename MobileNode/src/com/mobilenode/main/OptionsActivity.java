@@ -120,7 +120,9 @@ public class OptionsActivity extends PreferenceActivity {
         acceptButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference arg0) { 
+            	VideoFeatures myFeatures = new VideoFeatures(settings.getInt("video_resX", 640), settings.getInt("video_resY", 320), settings.getString("video_bitrate", "500"), settings.getString("video_framerate", "15"));
             	Intent myIntent = new Intent(OptionsActivity.this, MainActivity.class);
+            	myIntent.putExtra("video_features", myFeatures);
             	OptionsActivity.this.startActivity(myIntent);
             	String res = settings.getInt("video_resX", 640)+"x"+settings.getInt("video_resY", 320)+"px";
             	Log.i("OPTIONS", res);

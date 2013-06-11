@@ -85,6 +85,8 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
         
         
         setContentView(R.layout.main);
+        Intent myIntent = getIntent();
+        VideoFeatures myFeatures = (VideoFeatures)myIntent.getSerializableExtra("video_features");
         
         wifiManager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
     	wifiInfo = wifiManager.getConnectionInfo();
@@ -97,7 +99,7 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
     	port = 8086;
     	//Send rtsp URL to the server
     	String rtspUrl = generateUrl(wifiInfo);
-    	Thread mManager = new Thread(new MulticastManager(rtspUrl, handler));
+    	Thread mManager = new Thread(new MulticastManager(rtspUrl, handler, myFeatures));
         mManager.start();
     	
         camera = (SurfaceView)findViewById(R.id.smallcameraview);
