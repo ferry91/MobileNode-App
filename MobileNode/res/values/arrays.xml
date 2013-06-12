@@ -35,14 +35,12 @@
     
     <!-- FRAMERATE -->
     <string-array name="videoFramerateArray">
-        <item>20 fps</item>
         <item>15 fps</item>
         <item>10 fps</item>
         <item>8 fps</item>
     </string-array>
 
     <string-array name="videoFramerateValues">
-        <item>20</item>
         <item>15</item>
         <item>10</item>
         <item>8</item>
@@ -50,7 +48,6 @@
     
     <!-- BITRATE -->
     <string-array name="videoBitrateArray">
-        <item>1000 kbps</item>
         <item>700 kbps</item>
         <item>500 kbps</item>
         <item>400 kbps</item>
@@ -61,7 +58,6 @@
     </string-array>
 
     <string-array name="videoBitrateValues">
-        <item>1000</item>
         <item>700</item>
         <item>500</item>
         <item>400</item>
